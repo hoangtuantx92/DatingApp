@@ -17,9 +17,9 @@
             [(ngModel)]="userParams.maxAge" name="maxAge">
         </div>
       
-        <div class="form-group px-2">
+        <div class="form-group px-1">
           <label for="gender">Show: </label>
-          <select class="form-control ml-1" style="width: 130px" id="gender"
+          <select class="form-control ml-1" style="width: 120px; height: 37px" id="gender"
             [(ngModel)]="userParams.gender" name="gender">
             <option *ngFor="let gender of genderList" [value]="gender.value">
               {{gender.display}}
