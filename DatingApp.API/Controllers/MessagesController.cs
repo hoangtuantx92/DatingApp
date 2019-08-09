@@ -45,6 +45,8 @@ namespace DatingApp.API.Controllers {
             if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();
 
+            messageParams.UserId = userId;
+
             var messagesFromRepo = await _repo.GetMessagesForUser(messageParams);
 
             var messages = _mapper.Map<IEnumerable<MessageToReturnDto>>(messagesFromRepo);
