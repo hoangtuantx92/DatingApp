@@ -39,7 +39,8 @@ namespace DatingApp.API.Controllers {
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMessagesForUser(int userId, MessageParams messageParams)
+        public async Task<IActionResult> GetMessagesForUser(int userId,
+            [FromQuery]MessageParams messageParams)
         {
             if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();
