@@ -1,8 +1,9 @@
 <div class="card">
   <div class="card-body">
-    <div *ngIf="messages?.length === 0"></div>
+    <div *ngIf="messages?.length === 0">
     <p>No messages yet... say hi by using message box below</p>
-    <div>
+  </div>
+
       <ul class="chat">
         <li *ngFor="let message of messages">
           <!-- to them-->
@@ -43,5 +44,4 @@
         </li>
       </ul>
     </div>
-  </div>
 </div>
