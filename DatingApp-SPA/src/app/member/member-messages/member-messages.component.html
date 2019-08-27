@@ -2,5 +2,24 @@
   <div class="card-body">
     <div *ngIf="messages?.length === 0"></div>
     <p>No messages yet... say hi by using message box below</p>
+    <div>
+      <ul class="chat">
+        <li *ngFor="let message of messages">
+          <!-- to them-->
+          <div *ngIf="message.senderId == recipientId">
+            <span class="chat-img float-left">
+              <img src="{{message.senderPhotoUrl}}" alt="{{message.senderKnowAs}}" class="rounded-circle">
+            </span>
+            <div class="chat-body">
+              <div class="header">
+                <strong class="primary"></strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- to me -->
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
